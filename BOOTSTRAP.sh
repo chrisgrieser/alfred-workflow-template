@@ -15,11 +15,13 @@ year=$(date +"%Y")
 
 #───────────────────────────────────────────────────────────────────────────────
 
+LC_ALL=C # prevent byte sequence error
+
 # replace them all
 # $1: placeholder name as {{mustache-template}}
 # $2: the replacement
 function replacePlaceholders() {
-	LC_ALL=C # prevent byte sequence error
+
 	# INFO macOS' sed requires `sed -i ''`, remove the `''` when on Linux or using GNU sed
 	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -exec sed -i '' "s/$1/$2/g" {} \;
 }
@@ -31,15 +33,16 @@ replacePlaceholders "{{year}}" "$year"
 
 #───────────────────────────────────────────────────────────────────────────────
 
-open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/?do=add"
-
-osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
-open "https://github.com/$repo/settings/actions"
+mkdir ./assets # for showcase.png
+print "\033[1;32mSuccess. Script will delete itself."
 
 #───────────────────────────────────────────────────────────────────────────────
 
-print "\033[1;32mSuccess. Script will delete itself."
+# open links
 sleep 1
+open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/?do=add"
+osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
+open "https://github.com/$repo/settings/actions"
 
 # make this script delete itself
 rm -- "$0"
