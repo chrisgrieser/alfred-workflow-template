@@ -29,6 +29,10 @@ replacePlaceholders "{{workflow-name}}" "$name"
 replacePlaceholders "{{workflow-description}}" "$desc"
 replacePlaceholders "{{year}}" "$year"
 
+#───────────────────────────────────────────────────────────────────────────────
+
+open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/"
+
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
 
