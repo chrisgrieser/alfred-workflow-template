@@ -3,6 +3,8 @@
 
 {{workflow-description}}
 
+<img src="./assets/showcase.png" alt="showcase" width="50%">
+
 ## Features
 - 
 
