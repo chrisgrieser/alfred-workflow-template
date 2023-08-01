@@ -40,7 +40,7 @@ print "\033[1;32mSuccess. Script will delete itself."
 
 # open links
 sleep 1
-open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/?do=add"
+open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/"
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
 
