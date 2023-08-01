@@ -39,8 +39,12 @@ print "\033[1;32mSuccess. Script will delete itself."
 #───────────────────────────────────────────────────────────────────────────────
 
 # open links
-sleep 1
+sleep 1.2
+
+# TODO remove the alfred forum link as soon as Alfred fully switches to the GitHub repo
 open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/"
+open "https://github.com/alfredapp/gallery-edits/issues/new/choose"
+
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
 
