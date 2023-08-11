@@ -1,9 +1,10 @@
-# {{workflow-name}}
+ <!-- LTeX: disabled=true -->
+# {{workflow-name}} <!-- LTeX: enabled=true -->
 ![](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic) 
 
 {{workflow-description}}
 
-<img src="./assets/showcase.png" alt="showcase" width="50%">
+- [ ] Showcase image to be inserted here.
 
 ## Features
 - 
