@@ -33,17 +33,15 @@ replacePlaceholders "{{year}}" "$year"
 
 #───────────────────────────────────────────────────────────────────────────────
 
-mkdir ./assets # for showcase.png
 print "\033[1;32mSuccess. Script will delete itself."
+sleep 1
 
 #───────────────────────────────────────────────────────────────────────────────
 
 # open links
-sleep 1.2
 
-# TODO remove the alfred forum link as soon as Alfred fully switches to the GitHub repo
-open "https://www.alfredforum.com/forum/51-submit-your-workflows-to-alfred-gallery/"
 open "https://github.com/alfredapp/gallery-edits/issues/new/choose"
+open "https://www.alfredforum.com/forum/3-share-your-workflows/
 
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
