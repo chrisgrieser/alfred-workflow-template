@@ -10,7 +10,7 @@
 - 
 
 ## Installation
-[➡️ Download the latest release.](https://github.com/chrisgrieser/{{workflow-id}}/releases/latest)
+[➡️ Download the latest release.](./releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's workflow-update mechanism.
 
