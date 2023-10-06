@@ -1,4 +1,4 @@
- <!-- LTeX: enabled=false -->
+<!-- LTeX: enabled=false -->
 # {{workflow-name}} 
 <!-- LTeX: enabled=true -->
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic) ![version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic) 
@@ -7,16 +7,13 @@
 
 - [ ] Showcase image to be inserted here.
 
-## Features
-- 
+## Usage
+- Do xxxxx via the keyword `xxx`. 
 
 ## Installation
 [➡️ Download the latest release.](./releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's workflow-update mechanism.
-
-## Usage
-- 
 
 ## Credits
 <!-- vale Google.FirstPerson = NO -->
