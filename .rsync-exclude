@@ -1,4 +1,5 @@
 .rsync-exclude
+.editorconfig
 .gitignore
 .git/
 .github/
