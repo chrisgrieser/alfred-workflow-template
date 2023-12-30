@@ -9,7 +9,7 @@
 - [ ] Showcase image to be inserted here.
 
 ## Usage
-- Do {{this}} via the keyword `xxx`.
+- {{Do this}} via the keyword `xxx`.
 
 ## Installation
 [➡️ Download the latest release.](./releases/latest)
