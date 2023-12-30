@@ -34,30 +34,14 @@ replacePlaceholders "{{year}}" "$year"
 
 #───────────────────────────────────────────────────────────────────────────────
 
-# move OneUpdater to local repo
-workflow_id=$(basename "$PWD")
-prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" | cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$HOME|")
-local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
-
-if [[ ! -d "$local_workflow" ]]; then
-	echo "local workflow folder not found: $local_workflow"
-	return 1
-fi
-
-mkdir -p "$local_workflow/scripts/"
-mv "./scripts/OneUpdater.sh" "/$local_workflow/scripts/OneUpdater.sh"
-
 # transfer local files
 # INFO will also delete this script, since it does not exist in local repo
 make --silent transfer-local-files
 
-print "\033[1;32mSuccess.\033[0m"
-
-#───────────────────────────────────────────────────────────────────────────────
 # open links
-
 sleep 1
-# open "https://github.com/alfredapp/gallery-edits/issues/new/choose"
 open "https://www.alfredforum.com/forum/3-share-your-workflows/"
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
+
+print "\033[1;32mSuccess.\033[0m"
