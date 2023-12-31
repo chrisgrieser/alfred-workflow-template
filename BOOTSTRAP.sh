@@ -56,9 +56,10 @@ replacePlaceholders "{{year}}" "$year"
 make --silent transfer-local-files
 
 # open links
-sleep 1
 open "https://www.alfredforum.com/forum/3-share-your-workflows/"
 osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
 open "https://github.com/$repo/settings/actions"
+
+git add --all && git commit -m "init: bootstrap"
 
 print "\033[1;32mSuccess.\033[0m"
