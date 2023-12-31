@@ -6,7 +6,8 @@ set -e # abort when any command errors, prevents this script from self-removing 
 # ensure the local folder has the same name as the this repo's folder
 # requirement for rsync-transfer of files
 workflow_id=$(basename "$PWD")
-prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" | cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$$HOME|")
+prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" | 
+	cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$HOME|")
 local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
 
 if [[ ! -d "$local_workflow" ]]; then
