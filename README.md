@@ -7,10 +7,12 @@
 - [ ] Showcase image to be inserted here.
 
 ## Usage
-- {{Do this}} via the keyword `xxx`.
+- ((Do this)) via the keyword `xxx`.
+- Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
+  to ((do this))
 
 ## Installation
-[➡️ Download the latest release.](./releases/latest)
+[➡️ Download the latest release.](https://github.com/{{repo}}/releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
 workflow-update mechanism.

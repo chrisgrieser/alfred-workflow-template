@@ -43,6 +43,7 @@ function replacePlaceholders() {
 	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -exec sed -i '' "s/$1/$2/g" {} \;
 }
 
+replacePlaceholders "{{repo}}" "$repo"
 replacePlaceholders "{{owner}}" "$owner"
 replacePlaceholders "{{workflow-id}}" "$id"
 replacePlaceholders "{{workflow-name}}" "$display_name"
