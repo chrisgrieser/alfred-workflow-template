@@ -40,10 +40,10 @@ LC_ALL=C # prevent byte sequence error
 # $2: the replacement
 function replacePlaceholders() {
 	# INFO macOS' sed requires `sed -i ''`, remove the `''` when on Linux or using GNU sed
-	find . -type f -not -path '*/\.git/*' -exec sed -i '' "s/$1/$2/g" {} \;
+	find . -type f -not -path '*/\.git/*' -exec sed -i '' "s|$1|$2|g" {} \;
 }
 
-replacePlaceholders "{{repo}}" "$repo"
+replacePlaceholders "{{repo}}" "$repo" # has `/`, so `sed` must use different delimiter
 replacePlaceholders "{{owner}}" "$owner"
 replacePlaceholders "{{workflow-id}}" "$id"
 replacePlaceholders "{{workflow-name}}" "$display_name"
