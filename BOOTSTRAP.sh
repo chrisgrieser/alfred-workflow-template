@@ -12,9 +12,10 @@ local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
 
 if [[ ! -d "$local_workflow" ]]; then
 	print "\033[1;31mThere is no folder called '$workflow_id' in the local Alfred workflow folder.\033[0m"
-	print "Please rename the respective folder. For convenience, '\e[1;34m$workflow_id\e[0m has been copied to the clipboard."
+	print "Please rename the respective folder. For convenience, \e[1;34m$workflow_id\e[0m has been copied to the clipboard."
 	echo -n "$workflow_id" | pbcopy
-	open -R "$prefs_location/Alfred.alfredpreferences/workflows/"
+	open "$prefs_location/Alfred.alfredpreferences/workflows/"
+	exit 1
 fi
 
 #───────────────────────────────────────────────────────────────────────────────
