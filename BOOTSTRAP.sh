@@ -6,7 +6,7 @@ set -e # abort when any command errors, prevents this script from self-removing 
 # ensure the local folder has the same name as the this repo's folder
 # requirement for rsync-transfer of files
 workflow_id=$(basename "$PWD")
-prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" | 
+prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" |
 	cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$HOME|")
 local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
 
@@ -14,7 +14,7 @@ if [[ ! -d "$local_workflow" ]]; then
 	print "\033[1;31mThere is no folder called '$workflow_id' in the local Alfred workflow folder.\033[0m"
 	print "Please rename the respective folder. For convenience, '\e[1;34m$workflow_id\e[0m has been copied to the clipboard."
 	echo -n "$workflow_id" | pbcopy
-	open -R "$local_workflow"
+	open -R "$prefs_location/Alfred.alfredpreferences/workflows/"
 fi
 
 #───────────────────────────────────────────────────────────────────────────────
@@ -40,7 +40,7 @@ LC_ALL=C # prevent byte sequence error
 # $2: the replacement
 function replacePlaceholders() {
 	# INFO macOS' sed requires `sed -i ''`, remove the `''` when on Linux or using GNU sed
-	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -exec sed -i '' "s/$1/$2/g" {} \;
+	find . -type f -not -path '*/\.git/*' -exec sed -i '' "s/$1/$2/g" {} \;
 }
 
 replacePlaceholders "{{repo}}" "$repo"
