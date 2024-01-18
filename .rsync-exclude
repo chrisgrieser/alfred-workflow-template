@@ -1,5 +1,7 @@
 .rsync-exclude
 .editorconfig
+.markdownlint.yaml
+.typos.toml
 .gitignore
 .git/
 .github/
