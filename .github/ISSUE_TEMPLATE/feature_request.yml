@@ -3,7 +3,7 @@ description: Suggest an idea
 title: "Feature Request: "
 labels: ["enhancement"]
 body:
-- type: checkboxes
+  - type: checkboxes
     id: checklist
     attributes:
       label: Checklist
