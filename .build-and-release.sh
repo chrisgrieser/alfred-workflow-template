@@ -12,6 +12,12 @@ echo -n "   next version: "
 read -r nextVersion
 echo "────────────────────────"
 
+# GUARD
+if [[ -z "$nextVersion" || "$nextVersion" == "$currentVersion" ]]; then
+	print "\033[1;31mInvalid version number\033[0m"
+	exit 1
+fi
+
 # update version number in *repo* info.plist
 plutil -replace version -string "$nextVersion" info.plist
 
@@ -30,12 +36,7 @@ echo -n "https://github.com/chrisgrieser/${workflow_name}/releases/download/${ne
 
 #───────────────────────────────────────────────────────────────────────────────
 
-# git operations
-git add -A
-git commit -m "release: $nextVersion"
-git pull
-git push
-
-# trigger the release action via github action
-git tag "$nextVersion" 
-git push origin --tags
+git add --all &&
+	git commit -m "release: $nextVersion" &&
+	git pull && git push &&
+	git tag "$nextVersion" && git push origin --tags # trigger the release action
