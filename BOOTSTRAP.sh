@@ -12,7 +12,7 @@ local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
 
 if [[ ! -d "$local_workflow" ]]; then
 	print "\033[1;31mThere is no folder called '$workflow_id' in the local Alfred workflow folder.\033[0m"
-	print "Please rename the respective folder. For convenience, \e[1;34m$workflow_id\e[0m has been copied to the clipboard."
+	print "Rename the respective folder. For convenience, \e[1;34m$workflow_id\e[0m has been copied to the clipboard."
 	echo -n "$workflow_id" | pbcopy
 	open "$prefs_location/Alfred.alfredpreferences/workflows/"
 	exit 1
@@ -59,8 +59,6 @@ make --silent transfer-local-files
 
 # open links
 open "https://www.alfredforum.com/forum/3-share-your-workflows/"
-osascript -e 'display notification "" with title "ℹ️ Write permissions for workflows needed."'
-open "https://github.com/$repo/settings/actions"
 
 git add --all && git commit -m "init: bootstrap"
 
