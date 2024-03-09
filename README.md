@@ -18,7 +18,7 @@ When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
 workflow-update mechanism.
 
 <!-- vale Google.FirstPerson = NO -->
-## Credits
+## AAbot the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
