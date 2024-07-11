@@ -21,10 +21,10 @@ fi
 #───────────────────────────────────────────────────────────────────────────────
 
 # plugin name is the same as the git repo name and can therefore be inferred
-repo=$(git remote -v | head -n1 | sed 's/\.git.*//' | sed 's/.*://')
+repo=$(git remote -v | head -n1 | sed 's/.*:\(.*\) .*/\1/')
 id=$(echo "$repo" | cut -d/ -f2)
 owner=$(echo "$repo" | cut -d/ -f1)
-display_name=$(echo "$id" | tr "-" " ")
+display_name=$(echo "$id" | tr "-" " " | sed 's/alfred/Alfred/')
 
 # desc can be inferred from github description (not using jq for portability)
 desc=$(curl -sL "https://api.github.com/repos/$repo" | grep "description" | head -n1 | cut -d'"' -f4)

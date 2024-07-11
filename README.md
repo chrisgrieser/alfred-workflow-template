@@ -1,6 +1,8 @@
+<!-- LTeX: enabled=false -->
 # {{workflow-name}}
+<!-- LTeX: enabled=true -->
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic)
-![version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
+![Version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
 
 {{workflow-description}}
 
@@ -18,7 +20,7 @@ When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
 workflow-update mechanism.
 
 <!-- vale Google.FirstPerson = NO -->
-## Aboit the developer
+## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
