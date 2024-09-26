@@ -6,12 +6,11 @@ set -e # abort when any command errors, prevents this script from self-removing 
 # ensure the local folder has the same name as the this repo's folder
 # requirement for rsync-transfer of files
 workflow_id=$(basename "$PWD")
-prefs_location=$(grep "5" "$HOME/Library/Application Support/Alfred/prefs.json" |
-	cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$HOME|")
+prefs_location=$(defaults read com.runningwithcrayons.Alfred-Preferences syncfolder | sed "s|^~|$HOME|")
 local_workflow="$prefs_location/Alfred.alfredpreferences/workflows/$workflow_id"
 
 if [[ ! -d "$local_workflow" ]]; then
-	print "\033[1;31mThere is no folder called '$workflow_id' in the local Alfred workflow folder.\033[0m"
+	print "\e[1;31mThere is no folder called '$workflow_id' in the local Alfred workflow folder.\e[0m"
 	print "Rename the respective folder. For convenience, \e[1;34m$workflow_id\e[0m has been copied to the clipboard."
 	echo -n "$workflow_id" | pbcopy
 	open "$prefs_location/Alfred.alfredpreferences/workflows/"
