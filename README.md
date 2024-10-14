@@ -1,8 +1,7 @@
-<!-- LTeX: enabled=false -->
 # {{workflow-name}}
-<!-- LTeX: enabled=true -->
-![Download count](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic)
-![Version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
+![GitHub Downloads](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred Gallery Downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query={{workflow-id}}&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
+![Latest Release](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
 
 {{workflow-description}}
 
