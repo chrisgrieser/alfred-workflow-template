@@ -10,7 +10,11 @@ body:
       options:
         - label: I have updated to the [latest version of this workflow](./releases/latest).
           required: true
-        - label: I am using Alfred 5 or later.
+        - label: I am using Alfred 5.5 or later.
+          required: true
+        - label: I have read the README.
+          required: true
+        - label: I have searched the existing issues for this workflow.
           required: true
   - type: input
     id: alfred-version-info
