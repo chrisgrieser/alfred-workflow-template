@@ -1,6 +1,6 @@
 # {{workflow-name}}
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=GitHub%20Downloads&style=plastic&logo=github)
-![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query={{workflow-id}})
+<!-- TODO: insert GALLERY_ID once I get the numbers ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query=[[GALLERY_ID]])-->
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
 
 {{workflow-description}}
