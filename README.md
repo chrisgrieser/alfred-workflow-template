@@ -9,6 +9,8 @@
 
 ## Usage
 - ((Do this)) via the keyword `xxx`.
+	* <kbd>⌘</kbd><kbd>↩</kbd> foobar.
+	* <kbd>⌥</kbd><kbd>↩</kbd> foobar.
 - Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
   to ((do this))
 
