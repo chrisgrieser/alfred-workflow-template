@@ -61,4 +61,4 @@ git add --all && git commit -m "init: bootstrap"
 print "\033[1;32mSuccess.\033[0m"
 echo "Opening Alfred Forum for sharing…"
 sleep 1
-open "https://www.alfredforum.com/forum/3-share-your-workflows/"
+open "https://www.alfredforum.com/forum/3-share-your-workflows/?do=add"
